@@ -9,10 +9,10 @@ def key_for_min_value(name_hash)
     return nil
   end
    
-   name_hash.collect do |key, value|
+   name_hash.each do |key, value|
      if value < comparison
        comparison = value
      end
-   comparison
  end
+ name_hash.index(comparison)
 end
